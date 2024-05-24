@@ -42,6 +42,7 @@ Requires:	kf6-dirs
 Requires:	kf6-kconfig >= %{version}
 Requires:	kf6-kcoreaddons >= %{version}
 Requires:	kf6-kwindowsystem >= %{version}
+Obsoletes:	kf5-%{kfname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt6dir		%{_libdir}/qt6
@@ -57,6 +58,7 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	Qt6DBus-devel >= %{qtver}
 Requires:	Qt6Widgets-devel >= %{qtver}
+Obsoletes:	kf5-%{kfname}-devel < %{version}
 
 %description devel
 Header files for %{kfname} development.
