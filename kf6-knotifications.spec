@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.3
+%define		kdeframever	6.4
 %define		qtver		5.15.2
 %define		kfname		knotifications
 
 Summary:	Desktop notifications
 Name:		kf6-%{kfname}
-Version:	6.3.0
+Version:	6.4.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	3b26263863aef4349fd1b2df146e7e7e
+# Source0-md5:	71afdde9eec530c57e942c472dfed0b0
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel >= %{qtver}
