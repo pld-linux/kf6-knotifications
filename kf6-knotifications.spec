@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.18
+%define		kdeframever	6.19
 %define		qtver		5.15.2
 %define		kfname		knotifications
 
 Summary:	Desktop notifications
 Name:		kf6-%{kfname}
-Version:	6.18.0
+Version:	6.19.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	6db938bbcf34ebc7614383396d9622ef
+# Source0-md5:	0ac8594982be1498e492225e12451551
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel >= %{qtver}
@@ -100,9 +100,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.md
 %ghost %{_libdir}/libKF6Notifications.so.6
-%attr(755,root,root) %{_libdir}/libKF6Notifications.so.*.*
+%{_libdir}/libKF6Notifications.so.*.*
 %dir %{_libdir}/qt6/qml/org/kde/notification
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/notification/libknotificationqmlplugin.so
+%{_libdir}/qt6/qml/org/kde/notification/libknotificationqmlplugin.so
 %{_libdir}/qt6/qml/org/kde/notification/qmldir
 %{_libdir}/qt6/qml/org/kde/notification/kde-qmlmodule.version
 %{_libdir}/qt6/qml/org/kde/notification/knotificationqmlplugin.qmltypes
