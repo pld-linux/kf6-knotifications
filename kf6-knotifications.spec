@@ -52,6 +52,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 KNotification is used to notify the user of an event. It covers
 feedback and persistent events.
 
+%description -l pl.UTF-8
+KNotification jest używane do powiadamiania użytkownika o zdarzeniach.
+Dotyczy to zarówno informacji zwrotnych, jak i trwałych zdarzeń.
+
 %package devel
 Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
