@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.28
+%define		kdeframever	6.29
 %define		qtver		5.15.2
 %define		kfname		knotifications
 
 Summary:	Desktop notifications
 Name:		kf6-%{kfname}
-Version:	6.28.0
+Version:	6.29.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	43d8e93cc995cf432c56b638e5d0d047
+# Source0-md5:	95a52444c959d82e83d8506756b1498d
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel >= %{qtver}
@@ -92,7 +92,7 @@ Pliki nagłówkowe dla programistów używających %{kfname}.
 rm -rf $RPM_BUILD_ROOT
 %ninja_install -C build
 
-%find_lang %{kfname}6_qt --with-qm --all-name --with-kde
+#%%find_lang %{kfname}6_qt --with-qm --all-name --with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -100,7 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 %post -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-%files -f %{kfname}6_qt.lang
+%files
 %defattr(644,root,root,755)
 %doc README.md
 %ghost %{_libdir}/libKF6Notifications.so.6
